@@ -1,0 +1,21 @@
+# ===== 通用 =====
+.DS_Store
+Thumbs.db
+*.log
+
+# ===== 前端 fill_form =====
+fill_form/node_modules/
+fill_form/.vite/
+fill_form/out/
+fill_form/resources/backend/
+
+# ===== 后端 fill_inForm =====
+fill_inForm/.venv/
+fill_inForm/code/build/
+fill_inForm/code/dist/
+fill_inForm/**/__pycache__/
+fill_inForm/**/*.pyc
+
+# ===== IDE =====
+.idea/
+.vscode/
