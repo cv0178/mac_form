@@ -31,6 +31,12 @@
         }
       ]
     },
+    "mac": {
+      "target": ["dmg"],
+      "dmg": {
+        "filesystem": "APFS"
+      }
+    },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,

@@ -14,15 +14,19 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {},
     },
-    {
-      name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
-    },
-    {
+     {
       name: '@electron-forge/maker-dmg',
       platforms: ['darwin'],
-      config: {},
+      config: {
+        // 压缩格式：lzfse，macOS 10.11+，比 UDZO 更快、体积更小
+        format: 'ULFO',
+        // 文件系统改成 APFS（这才是解决 HFS+ 挂载问题的关键）
+        additionalDMGOptions: {
+          filesystem: 'APFS',
+        },
+      },
     },
+
     {
       name: '@electron-forge/maker-deb',
       config: {},
